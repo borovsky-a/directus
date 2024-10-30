@@ -8,7 +8,11 @@
 		"format": "prettier --cache --check .",
 		"lint": "eslint --cache .",
 		"test": "pnpm --recursive --filter '!tests-blackbox' test",
-		"test:blackbox": "pnpm --filter directus deploy --prod dist && pnpm --filter tests-blackbox test"
+		"test:blackbox": "pnpm --filter directus deploy --prod dist && pnpm --filter tests-blackbox test",
+		"attach": "pnpm --recursive dev",
+		"launch": "pnpm --filter api dev",
+		"launch-test": "NODE_ENV=test pnpm --filter api dev",
+		"bootstrap-test": "NODE_ENV=test pnpm --filter api cli bootstrap "
 	},
 	"devDependencies": {
 		"@changesets/cli": "2.27.9",
